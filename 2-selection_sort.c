@@ -10,7 +10,7 @@ void selection_sort(int *array, size_t size)
 	int temp;
 	size_t min_idx, j, i;
 
-	if (array == NULL || size == 0)
+	if (array == NULL || size == 0 || size < 2)
 		return;
 
 	for (i = 0; i < size - 1; i++)
