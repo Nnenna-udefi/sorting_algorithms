@@ -71,5 +71,5 @@ void quick_sort(int *array, size_t size)
 		return;
 
 	quick_sort_wrapper(array, 0, size - 1, size);
+	print_array(array, size);
 }
-
