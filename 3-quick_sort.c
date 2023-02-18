@@ -17,6 +17,8 @@ void swap_ints(int *a, int *b)
  * and return the index of the pivot
  * @low: lower point
  * @high: higher point
+ * @array: array to be sorted
+ * @size: size of the array
  * Return: index of the pivot
  */
 int partition(int *array, int low, int high)
@@ -71,5 +73,4 @@ void quick_sort(int *array, size_t size)
 		return;
 
 	quick_sort_wrapper(array, 0, size - 1, size);
-	print_array(array, size);
 }
