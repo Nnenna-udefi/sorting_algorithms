@@ -40,5 +40,6 @@ void quick_sort_hoare(int *array, size_t size);
 
 /* swap functions */
 void swap_ints(int *a, int *b);
+void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
 
 #endif
