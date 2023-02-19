@@ -8,8 +8,8 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	int temp = 0;
 	unsigned int i = 0, j = 0, interval = 0;
+	int temp = 0;
 
 	if (array == NULL || size < 2)
 		return;
@@ -21,7 +21,7 @@ void shell_sort(int *array, size_t size)
 		for (i = interval; i < size; i++)
 		{
 			temp = array[i];
-			for (j = 1; j >= interval && array[j - interval] > temp; j -= interval)
+			for (j = i; j >= interval && array[j - interval] > temp; j -= interval)
 			{
 				if (array[j] != array[j - interval])
 					array[j] = array[j - interval];
