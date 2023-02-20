@@ -20,7 +20,6 @@ void merge_sort(int *array, size_t size)
 		return;
 	for (; i < size; i++)
 		base[i] = array[i];
-	merge_partition(0, size, array, base);
 	free(base);
 }
 
@@ -60,26 +59,4 @@ void merge(size_t lo, size_t mi, size_t hi, int *dest, int *src)
 		}
 	printf("[Done]: ");
 	print_array(dest + lo, hi - lo);
-}
-
-/**
- * merge_partition - A funtion that splits the array recursively.
- * @lo: Lower index.
- * @hi: Higher index.
- * @array: The array to sort.
- * @base: The copy of the array.
- * Return: Nothing.
- */
-void merge_partition(size_t lo, size_t hi, int *array, int *base)
-{
-	size_t mi = 0;
-
-	if (hi - lo < 2)
-		return;
-	mi = (lo + hi) / 2;
-	merge_partition(lo, mi, array, base);
-	merge_partition(mi, hi, array, base);
-	merge(lo, mi, hi, array, base);
-	for (mi = lo; mi < hi; mi++)
-		base[mi] = array[mi];
 }
