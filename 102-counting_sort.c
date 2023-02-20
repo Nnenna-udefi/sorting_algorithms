@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
-  * counting_sort - A function that sorts an array using counting algorithm.
+  * counting_sort - Afunction that sorts an array using counting algorithm.
   * @array: The array to sort.
   * @size: The length of the array.
-  * Return: NILL
+  * Return: Nothing.
   */
 void counting_sort(int *array, size_t size)
 {
